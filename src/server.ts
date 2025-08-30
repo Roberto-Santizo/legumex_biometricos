@@ -16,7 +16,7 @@ app.use('/token', appRoutes);
 
 BiometricoDatasource.initialize().then(async () => {
     console.log(colors.green.bold('conectado a la base de datos'));
-}).catch(error => console.log(colors.red.bold(error.message)));
+}).catch(error => console.log(colors.red.bold(error)));
 
 
 AppDatasource.initialize().then(async () => {
