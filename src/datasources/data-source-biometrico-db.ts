@@ -8,7 +8,11 @@ dotenv.config();
 
 const BiometricoDatasource = new DataSource({
     type: "mssql",
-    url: process.env.DB_BIOMETRICO_URL,
+    host: `${process.env.BIOMETRICO_HOST}`,
+    port: +process.env.BIOMETRICO_PORT,
+    username: process.env.BIOMETRICO_USER,
+    password: "TIC.2021$$",
+    database: process.env.BIOMETRICO_DB,
     entities: [Employee, Transaction],
     synchronize: false,
     options: {
